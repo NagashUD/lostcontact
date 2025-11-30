@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Missing Person </title>
+  <style>
+    :root{ --accent:#c41616; --dark:#0b1220; --muted:#666 }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Arial; margin:0; background:#f6f7f8; color:#111}
+    header{background:var(--dark); color:#fff; padding:14px 20px; display:flex; align-items:center; justify-content:space-between}
+    header h1{margin:0; font-size:20px; letter-spacing:2px}
+    .parody-badge{background:var(--accent); color:#fff; padding:6px 12px; border-radius:4px; font-weight:700}
+
+    main{max-width:980px; margin:28px auto; padding:0 20px}
+    .results{display:flex; gap:20px; flex-wrap:wrap}
+
+    .card{background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,.06); overflow:hidden; width:220px}
+    .thumb{width:100%; height:220px; object-fit:cover; display:block}
+    .card h3{margin:10px; font-size:15px; color:var(--dark)}
+    .card p{margin:0 10px 12px; color:var(--muted); font-size:13px}
+
+    /* Fake poster style */
+    .poster{background:#fff; border-radius:6px; margin-top:30px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,.12)}
+    .poster .top{background:var(--accent); color:#fff; text-align:center; padding:12px; font-weight:800; font-size:22px}
+    .poster img{width:100%; max-width:420px; display:block; margin:18px auto}
+    .poster .name{background:var(--accent); color:#fff; text-align:center; padding:10px; font-weight:800; font-size:20px}
+    .poster .txt{padding:14px; text-align:center; color:#222}
+
+    footer{max-width:980px; margin:20px auto; text-align:center; color:var(--muted); font-size:13px}
+
+    /* Clear parody notice */
+    .disclaimer{margin-top:12px; color:#8b0000; font-weight:700; text-align:center}
+
+    @media(max-width:640px){.results{justify-content:center}.card{width:100%; max-width:360px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Most Wanted — <span style="opacity:.6">Found & Missing</span></h1>
+      </header>
+
+  <main>
+    <p style="color:var(--muted)"></p>
+
+    <section class="results" aria-label="Liste">
+      <!-- Exemple de fiches — remplacez les src par vos images -->
+      <article class="card">
+        <img class="thumb" src="gw.jpg" alt="photo 1">
+        <h3>Gwendolyn</h3>
+        <p>Latest activity : <strong>www.altscene.com</strong> — Nov 29, 2025</p>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="images/missing-2.jpg" alt="image">
+        <h3>GhostGirl</h3>
+        <p>Statut : <em>Unable to contact</em></p>
+      </article>
+
+    </section>
+
+    <section class="poster" aria-label="Affiche disparition" style="margin-bottom:30px">
+      <div class="top">MISSING PERSON</div>
+      <!-- Remplacez l'image ci-dessous par votre visuel (conserver proportions) -->
+      <img src="gw.jpg" alt="photo principale">
+      <div class="name">Gwendolyn</div>
+      <div class="txt">
+        <p>We are appealing to the public to help us find her. 21 - Massachusetts, United States</p>
+        <p>Last known activity : <strong>www.altscene.com</strong> the <strong>Nov 29, 2025</strong>.</p>
+        <p>If you have any information, please visit <em>https://www.altscene.com/profile/view/485433</em> </p>
+      </div>
+    
+    </section>
+
+     </main>
+
+  <footer>
+
+  </footer>
+
+  <script>
+    // Script minimal : clique pour télécharger un exemple d'image
+    document.addEventListener('click', e => {
+      if(e.target.matches('.thumb')){
+        alert('Astuce : remplacez cette image en uploadant votre visuel dans images/poster-photo.jpg');
+      }
+    });
+  </script>
+</body>
+</html>
